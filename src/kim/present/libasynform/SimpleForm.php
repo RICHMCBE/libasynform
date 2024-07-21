@@ -58,10 +58,6 @@ class SimpleForm extends BaseStringContentForm{
             throw new FormValidationException("Expected an integer response, got " . gettype($data));
         }
 
-        if(!isset($this->data["buttons"][$data])){
-            throw new FormValidationException("Button $data does not exist");
-        }
-
         return $data;
     }
 
